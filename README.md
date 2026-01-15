@@ -16,3 +16,23 @@ Use cases:
 
 Run:
 python src/main.py
+
+TREE of Program
+log-anomaly-detector/
+│
+├── data/
+│   └── sample_logs.csv
+│
+├── src/
+│   ├── __init__.py
+│   ├── loader.py
+│   ├── detector.py
+│   └── main.py
+│
+├── tests/
+│   └── test_detector.py
+│
+├── .gitignore
+├── requirements.txt
+├── README.md
+└── LICENSE
