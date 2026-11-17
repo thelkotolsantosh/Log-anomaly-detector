@@ -6,8 +6,12 @@ The goal is not advanced machine learning, but clarity and correctness.
 
 How it works:
 - Load structured access logs
-- Calculate average and deviation
+- Calculate the median and median absolute deviation (scaled by 1.4826)
 - Flag unusually slow responses
+
+The default cutoff is median + 2.5 × scaled deviation. This keeps a single
+large spike from inflating its own threshold. When the deviation is zero,
+values above the median are flagged; a constant series produces no alerts.
 
 Use cases:
 - SOC triage
